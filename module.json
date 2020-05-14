@@ -1,0 +1,18 @@
+{
+  "name": "PrintableStream",
+  "title": "Printable Stream",
+  "description": "Make /stream view suitable for web browser's printing function.",
+  "version": "0.1.0",
+  "minimumCoreVersion" : "0.5.0",
+  "compatibleCoreVersion": "0.5.5",
+  "author": "Shoyu Vanilla",
+
+  "scripts": [],
+  "styles": ["style.css"],
+
+  "languages": [],
+  
+  "url": "https://github.com/ShoyuVanilla/PrintableStream",
+  "manifest": "https://raw.githubusercontent.com/ShoyuVanilla/PrintableStream/master/module.json",
+  "download": "https://github.com/ShoyuVanilla/PrintableStream/archive/master.zip"
+}

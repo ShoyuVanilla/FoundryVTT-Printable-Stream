@@ -1,0 +1,13 @@
+@media print {
+  body.stream {
+    background: white;
+    overflow: visible;
+    height: auto;
+  }
+  .sidebar-tab {
+    overflow: visible;
+  }
+  #chat-log {
+    overflow: visible;
+  }
+}
