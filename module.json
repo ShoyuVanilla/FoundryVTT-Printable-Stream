@@ -12,7 +12,7 @@
 
   "languages": [],
   
-  "url": "https://github.com/ShoyuVanilla/PrintableStream",
-  "manifest": "https://raw.githubusercontent.com/ShoyuVanilla/PrintableStream/master/module.json",
-  "download": "https://github.com/ShoyuVanilla/PrintableStream/archive/master.zip"
+  "url": "https://github.com/ShoyuVanilla/FoundryVTT-Printable-Stream",
+  "manifest": "https://raw.githubusercontent.com/ShoyuVanilla/FoundryVTT-Printable-Stream/master/module.json",
+  "download": "https://github.com/ShoyuVanilla/FoundryVTT-Printable-Stream/archive/master.zip"
 }
