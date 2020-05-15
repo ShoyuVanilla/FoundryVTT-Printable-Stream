@@ -11,3 +11,7 @@
     overflow: visible;
   }
 }
+
+#chat-controls .control-buttons {
+  flex: 0 0 72px;
+}
