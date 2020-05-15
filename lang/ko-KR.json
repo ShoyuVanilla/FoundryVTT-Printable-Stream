@@ -1,4 +1,4 @@
 {
-  "printable-stream.electron-error-message": "PrintableStream은 FVTT 스탠드얼론 어플리케이션에서 실행할 수 없습니다. 일반 웹 브라우저에서 사용해 주세요.",
+  "printable-stream.electron-error-message": "Printable /stream은 FVTT 스탠드얼론 어플리케이션에서 실행할 수 없습니다. 일반 웹 브라우저에서 사용하십시오.",
   "printable-stream.print-button": "출력"
 }

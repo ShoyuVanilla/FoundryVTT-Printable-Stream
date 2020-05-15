@@ -1,0 +1,18 @@
+body.stream {
+  background: transparent;
+  overflow: visible;
+  height: auto;
+}
+.sidebar-tab {
+  overflow: visible;
+}
+#chat-log {
+  overflow: visible;
+}
+
+@media print  
+{
+  #chat-log .message {
+    page-break-inside: avoid;
+  }
+}

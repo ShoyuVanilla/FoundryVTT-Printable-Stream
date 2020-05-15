@@ -21,6 +21,17 @@ Hooks.on('init', () => {
   const url = window.location.pathname;
   if (/\/stream/.test(url)) {
     CONFIG.ChatMessage.batchSize = Number.MAX_SAFE_INTEGER;
+    let cssId = 'modules/PrintableStream/printable-stream.css';
+    if (!document.getElementById(cssId)) {
+        let head  = document.getElementsByTagName('head')[0];
+        let link  = document.createElement('link');
+        link.id   = cssId;
+        link.rel  = 'stylesheet';
+        link.type = 'text/css';
+        link.href = cssId;
+        link.media = 'all';
+        head.appendChild(link);
+    }
   }
 });
 Hooks.on('renderChatLog', PrintableStreamModule.onRenderChatLog);

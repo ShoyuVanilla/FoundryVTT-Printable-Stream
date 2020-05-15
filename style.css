@@ -1,17 +1,6 @@
-@media print {
-  body.stream {
-    background: white;
-    overflow: visible;
-    height: auto;
-  }
-  .sidebar-tab {
-    overflow: visible;
-  }
-  #chat-log {
-    overflow: visible;
-  }
+#chat-controls div.roll-type-select select {
+  width: 176px;
 }
-
 #chat-controls .control-buttons {
   flex: 0 0 72px;
 }
