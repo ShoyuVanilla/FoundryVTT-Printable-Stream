@@ -3,14 +3,25 @@
   "title": "Printable Stream",
   "description": "Make /stream view suitable for web browser's printing function.",
   "version": "0.1.0",
-  "minimumCoreVersion" : "0.5.0",
+  "minimumCoreVersion" : "0.5.5",
   "compatibleCoreVersion": "0.5.5",
   "author": "Shoyu Vanilla",
 
-  "scripts": [],
+  "scripts": ["printable-stream.js"],
   "styles": ["style.css"],
 
-  "languages": [],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "kr",
+      "name": "Korean",
+      "path": "lang/ko-KR.json"
+    }
+  ],
   
   "url": "https://github.com/ShoyuVanilla/FoundryVTT-Printable-Stream",
   "manifest": "https://raw.githubusercontent.com/ShoyuVanilla/FoundryVTT-Printable-Stream/master/module.json",
