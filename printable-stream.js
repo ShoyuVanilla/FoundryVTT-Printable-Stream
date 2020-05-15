@@ -1,8 +1,7 @@
 class PrintableStreamModule {
   static onRenderChatLog(chatLog, html, data) {
     let printTitle = window.game.i18n.localize("printable-stream.print-button");
-    let button = $(`<a class="printable-stream" title=${printTitle}><i class="fas fa-print"></i></a> \
-      `);
+    let button = $(`<a class="printable-stream" title=${printTitle}><i class="fas fa-print"></i></a>`);
     button.on('click', (event) => PrintableStreamModule.onPrintButtonClicked())
     let element = html.find(".flexrow .control-buttons");
     element.prepend(button);
@@ -20,8 +19,7 @@ class PrintableStreamModule {
 
 Hooks.on('init', () => {
   const url = window.location.pathname;
-  if (/\/stream/.test(url))
-  {
+  if (/\/stream/.test(url)) {
     CONFIG.ChatMessage.batchSize = Number.MAX_SAFE_INTEGER;
   }
 });
