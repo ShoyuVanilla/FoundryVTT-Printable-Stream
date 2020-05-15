@@ -1,0 +1,4 @@
+{
+  "printable-stream.electron-error-message": "PrintableStream cannot work within the standalone FVTT Application. Please open your game from a regular browser.",
+  "printable-stream.print-button": "Print"
+}
