@@ -7,13 +7,25 @@ class PrintableStreamModule {
     element.prepend(button);
   }
 
+  static onRenderChatMessage(chatMessage, html, messageData) {
+    // Set message timeStamp as dateTime on which the message has been written
+    const lang = navigator.language || navigator.userLanguage;
+    const time = new Date(messageData.message.timestamp).toLocaleDateString(lang, {
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric"
+    });
+    let element = html.find(".message-timestamp")[0];
+    element.innerText = time;
+  }
+
   static onPrintButtonClicked() {
     if (navigator.userAgent.toLowerCase().indexOf(" electron/") !== -1) {
       let errorMessage = window.game.i18n.localize("printable-stream.electron-error-message");
       return ui.notifications.warn(errorMessage);
     }
 
-    window.location.href = '/stream';
+    window.open('/stream', '_blank');
   }
 
   static addStyle(styleString) {
@@ -26,8 +38,8 @@ class PrintableStreamModule {
 // Settings
 Hooks.once('init', () => {
   game.settings.register('PrintableStream', 'hideButtons', {
-    name: game.i18n.localize("printable-stream.hide-buttons-s"),
-    hint: game.i18n.localize("printable-stream.hide-buttons-l"),
+    name: "printable-stream.hide-buttons-s",
+    hint: "printable-stream.hide-buttons-l",
     scope: "client",
     config: true,
     default: false,
@@ -35,8 +47,8 @@ Hooks.once('init', () => {
   });
 
   game.settings.register('PrintableStream', 'fitwidth', {
-    name: game.i18n.localize("printable-stream.fitwidth-s"),
-    hint: game.i18n.localize("printable-stream.fitwidth-l"),
+    name: "printable-stream.fitwidth-s",
+    hint: "printable-stream.fitwidth-l",
     scope: "client",
     config: true,
     default: true,
@@ -44,8 +56,8 @@ Hooks.once('init', () => {
   });
 
   game.settings.register('PrintableStream', 'bgColor', {
-    name: game.i18n.localize("printable-stream.bgcolor-s"),
-    hint: game.i18n.localize("printable-stream.bgcolor-l"),
+    name: "printable-stream.bgcolor-s",
+    hint: "printable-stream.bgcolor-l",
     scope: "client",
     config: true,
     default: "transparent",
@@ -53,7 +65,7 @@ Hooks.once('init', () => {
   });
 });
 
-Hooks.on('init', () => {
+Hooks.once('init', () => {
   const url = window.location.pathname;
   if (/\/stream/.test(url)) {
     // Increase ChatMessage batch size to render all messages
@@ -71,6 +83,13 @@ Hooks.on('init', () => {
         link.media = 'all';
         head.appendChild(link);
     }
+
+    // Disable updateTimestamps
+    ChatLog.prototype.updateTimestamps = () => {};
+
+    // renderChatMessage Hook
+    Hooks.on('renderChatMessage', PrintableStreamModule.onRenderChatMessage);
+
 
     // Apply settings
     const hideButtons = game.settings.get('PrintableStream', 'hideButtons');
