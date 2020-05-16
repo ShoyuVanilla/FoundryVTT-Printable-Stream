@@ -2,9 +2,9 @@
   "name": "PrintableStream",
   "title": "Printable /stream",
   "description": "Make /stream view suitable for web browser's printing function.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "minimumCoreVersion" : "0.5.5",
-  "compatibleCoreVersion": "0.5.5",
+  "compatibleCoreVersion": "0.5.6",
   "author": "Shoyu Vanilla",
 
   "scripts": ["printable-stream.js"],
