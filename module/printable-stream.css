@@ -1,0 +1,34 @@
+* {
+	-webkit-touch-callout: all; /* iOS Safari */
+	-webkit-user-select: all; /* Safari */
+	-khtml-user-select: all; /* Konqueror HTML */
+	-moz-user-select: all; /* Firefox */
+	-ms-user-select: all; /* Internet Explorer/Edge */
+	user-select: all; /* Non-prefixed version */
+}
+body.stream {
+	overflow: visible;
+	height: auto;
+}
+body.stream #chat {
+	left: 0px;
+}
+body.stream .tab[data-tab] {
+	top: 0px;
+}
+.sidebar-tab {
+	overflow: visible;
+}
+#chat-log {
+	overflow: visible;
+}
+
+@media print
+{
+	#chat-log .message {
+		page-break-inside: avoid;
+	}
+	.message-metadata .button {
+		display: none;
+	}
+}

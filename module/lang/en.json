@@ -1,0 +1,10 @@
+{
+	"printable-stream.electron-error-message": "Printable /stream cannot work within the standalone FVTT Application. Please open your game from a regular browser.",
+	"printable-stream.print-button": "Print",
+	"printable-stream.hide-buttons-s": "Hide Buttons",
+	"printable-stream.hide-buttons-l": "Hide buttons in chat messages in /stream view.",
+	"printable-stream.fitwidth-s": "Fit Width",
+	"printable-stream.fitwidth-l": "Fit chat messages' width to page width in /stream view.",
+	"printable-stream.bgcolor-s": "Background Color",
+	"printable-stream.bgcolor-l": "Set background color of /stream view. e.g. black, #FFFFFF"
+}

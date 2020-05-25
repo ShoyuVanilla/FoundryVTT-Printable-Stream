@@ -1,0 +1,10 @@
+{
+	"printable-stream.electron-error-message": "Printable /stream은 FVTT 스탠드얼론 어플리케이션에서 실행할 수 없습니다. 일반 웹 브라우저에서 사용하십시오.",
+	"printable-stream.print-button": "출력",
+	"printable-stream.hide-buttons-s": "버튼 숨기기",
+	"printable-stream.hide-buttons-l": "/stream 뷰에서 채팅 메시지에 있는 버튼을 숨깁니다.",
+	"printable-stream.fitwidth-s": "폭 맞춤",
+	"printable-stream.fitwidth-l": "/stream 뷰에서 채팅 메시지 가로 폭을 페이지에 맞춥니다.",
+	"printable-stream.bgcolor-s": "배경 색상",
+	"printable-stream.bgcolor-l": "/stream 뷰의 배경 색상을 지정합니다. 예시) black, #FFFFFF"
+}

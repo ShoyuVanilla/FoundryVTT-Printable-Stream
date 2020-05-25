@@ -1,0 +1,7 @@
+#chat-controls div.roll-type-select select {
+	width: 176px;
+}
+.printable-stream-button {
+	flex: 0;
+	margin-right: 3px;
+}
